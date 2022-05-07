@@ -73,7 +73,7 @@ class FacilitiesRequests():
 			pFac = cast(pFac, POINTER(SIMCONNECT_DATA_FACILITY_AIRPORT))
 			Fac = pFac.contents
 			print("Icao: %s  Latitude: %lg  Longitude: %lg  Altitude: %lg" % (
-				Fac.Icao.decode(), Fac.Latitude, Fac.Longitude, Fac.Altitude)
+				Fac.Icao, Fac.Latitude, Fac.Longitude, Fac.Altitude)
 			)
 
 	class __FACILITY_WAYPOINT(FacilitiesHelper):
