@@ -1175,5 +1175,5 @@ class AircraftRequests():
 
 	class __AirportData(RequestHelper):
 		list = {
-			"NEAREST_AIRPORT": ["ICAO of the nearest airport", b'NearestAirportCurrentICAO', b'String', 'N']
+			"NearestAirportCurrentICAO": ["ICAO of the nearest airport", b'NearestAirportCurrentICAO', b'String', 'N']
 		}
