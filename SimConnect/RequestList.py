@@ -230,6 +230,8 @@ class AircraftRequests():
 		self.list.append(self.EnvironmentData)
 		self.SlingsandHoists = self.__SlingsandHoists(_sm, _time, _attemps)
 		self.list.append(self.SlingsandHoists)
+		self.AirportData = self.__AirportData(_sm, _time, _attemps)
+		self.list.append(self.AirportData)
 
 	class __AircraftEngineData(RequestHelper):
 		list = {
@@ -1169,4 +1171,9 @@ class AircraftRequests():
 			"LOCAL_DAY_OF_YEAR": ["Local day of year", b'LOCAL DAY OF YEAR', b'Number', 'N'],
 			"LOCAL_YEAR": ["Local year", b'LOCAL YEAR', b'Number', 'N'],
 			"TIME_ZONE_OFFSET": ["Local time difference from GMT", b'TIME ZONE OFFSET', b'Seconds', 'N'],
+		}
+
+	class __AirportData(RequestHelper):
+		list = {
+			"NEAREST_AIRPORT": ["ICAO of the nearest airport", b'NearestAirportCurrentICAO', b'String', 'N']
 		}
